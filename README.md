@@ -133,7 +133,7 @@ The Next.js E-commerce Model with Formik offers a comprehensive and scalable sol
 
 ## Links
   - Deploy on Vercel: Soon 
-  - Repository: https://github.com/Honorato-Dev/outfit-store
+  - Repository: https://github.com/jvmhonorato/outfit-store
   - In case of sensitive bugs like security vulnerabilities, please contact
     vituhonorato.89@gmail.com directly instead of using issue tracker. We value your effort
     to improve the security and privacy of this project!
