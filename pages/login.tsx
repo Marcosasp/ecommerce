@@ -63,41 +63,124 @@ const  LoginScreen = () => {
     
     
   return (
-    <>
-        <Formik
-            initialValues={initialValues}
-            validationSchema={validationSchema}
-            onSubmit={handleSubmit}
-         >
-         <Form  className='mx-auto max-w-screen-md' >
-          <h1 className='mb-4 text-xl'>Login</h1>
-            <div className='mb-4'>
-            <label htmlFor='email'>Email</label>
-              <Field autoFocus className='w-full' type="email" id="email" name="email" />
-            <div className='text-red-500'>
-            <ErrorMessage name="email" />
-            </div>
-            
-       
-        </div>
-        <div className='mb-4'>
-            <label htmlFor='password'>Password</label>
-            <Field autoFocus className='w-full' type="password" id="password" name="password" />
-            <div className='text-red-500'>
-                <ErrorMessage  name="password" />
-            </div>
-            
-        </div>
-        <div className='mb-4'>
-            <button type='submit' className='primary-button'>Login</button>
-        </div>
-        <div className='mb-4'>
-            Don&apos;t have an account? &nbsp;
-            <Link className='text-indigo-600' href={`/register?redirect=${redirect || '/'}`}>Register</Link>
-        </div>
-      </Form>
-     </Formik>
-    </>
+  <>
+  <Formik
+    initialValues={initialValues}
+    validationSchema={validationSchema}
+    onSubmit={handleSubmit}
+  >
+    <Form
+      className="
+        mx-auto mt-16 max-w-md rounded-2xl p-8 shadow-lg
+        bg-white text-gray-800
+        dark:bg-gray-900 dark:text-gray-100
+      "
+    >
+      <h1 className="mb-6 text-center text-2xl font-semibold">
+        Login
+      </h1>
+
+      {/* Email */}
+      <div className="mb-4">
+        <label
+          htmlFor="email"
+          className="
+            mb-1 block text-sm font-medium
+            text-gray-600 dark:text-gray-300
+          "
+        >
+          Email
+        </label>
+
+        <Field
+          autoFocus
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          className="
+            w-full rounded-lg border px-4 py-2 text-sm
+            bg-white border-gray-300 text-gray-900
+            focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200
+
+            dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100
+            dark:focus:border-indigo-400 dark:focus:ring-indigo-500/30
+          "
+        />
+
+        <ErrorMessage
+          name="email"
+          component="div"
+          className="mt-1 text-sm text-red-500"
+        />
+      </div>
+
+      {/* Password */}
+      <div className="mb-6">
+        <label
+          htmlFor="password"
+          className="
+            mb-1 block text-sm font-medium
+            text-gray-600 dark:text-gray-300
+          "
+        >
+          Password
+        </label>
+
+        <Field
+          type="password"
+          id="password"
+          name="password"
+          placeholder="••••••••"
+          className="
+            w-full rounded-lg border px-4 py-2 text-sm
+            bg-white border-gray-300 text-gray-900
+            focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200
+
+            dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100
+            dark:focus:border-indigo-400 dark:focus:ring-indigo-500/30
+          "
+        />
+
+        <ErrorMessage
+          name="password"
+          component="div"
+          className="mt-1 text-sm text-red-500"
+        />
+      </div>
+
+      {/* Button */}
+      <button
+        type="submit"
+        className="
+          w-full rounded-lg py-2 text-sm font-semibold text-white
+          bg-indigo-600 hover:bg-indigo-700 transition
+          focus:outline-none focus:ring-2 focus:ring-indigo-400
+
+          dark:bg-indigo-500 dark:hover:bg-indigo-600 dark:focus:ring-indigo-500
+        "
+      >
+        Login
+      </button>
+
+      {/* Register */}
+      <p className="mt-6 text-center text-sm text-gray-600 dark:text-gray-400">
+        Don&apos;t have an account?
+        <Link
+          className="
+            ml-1 font-medium text-indigo-600 hover:underline
+            dark:text-indigo-400
+          "
+          href={`/register?redirect=${redirect || "/"}`}
+        >
+          Register
+        </Link>
+      </p>
+    </Form>
+  </Formik>
+</>
+
+
   )
 }
 export default LoginScreen

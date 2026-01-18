@@ -2,8 +2,11 @@
   "compilerOptions": {
     "target": "es5",
     "downlevelIteration": true,
-    
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -14,14 +17,31 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": [
+        "./*"
+      ]
     }
   },
   "allowSytheticDefaultImports": "true",
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "utils/db.js", "utils/data.ts", "pages/api/auth/[...nextauth]/index.js","pages/api/auth/[id].tsx", "utils/error.js", "pages/_app.tsx", "pages/api/orders/index.js", "pages/api/orders/[id]/index.js", "pages/order/[id].tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "utils/db.js",
+    "utils/data.ts",
+    "pages/api/auth/[...nextauth]/index.js",
+    "pages/api/auth/[id].tsx",
+    "utils/error.js",
+    "pages/_app.tsx",
+    "pages/api/orders/index.js",
+    "pages/api/orders/[id]/index.js",
+    "pages/order/[id].tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
